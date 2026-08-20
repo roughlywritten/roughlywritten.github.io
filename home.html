@@ -10,16 +10,13 @@ layout: default
   <li class="entry-row">
     <div class="entry-meta">
       <span class="entry-date">{{ post.date | date: "%Y.%m.%d" }}</span>
-      {% if post.rating %}
-      <div class="stamp" aria-label="평점 {{ post.rating }}점 / 5점">
-        {% for i in (1..5) %}
-          {% if i <= post.rating %}<span class="dot filled"></span>{% else %}<span class="dot"></span>{% endif %}
-        {% endfor %}
-      </div>
-      {% endif %}
     </div>
     <div>
-      {% if post.category %}<span class="entry-cat">{{ post.category }}</span>{% endif %}
+      {% if post.tags %}
+      <div class="tag-list">
+        {% for tag in post.tags %}<span class="tag-pill">{{ tag }}</span>{% endfor %}
+      </div>
+      {% endif %}
       <a class="entry-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
       {% if post.description %}
       <p class="entry-excerpt">{{ post.description }}</p>

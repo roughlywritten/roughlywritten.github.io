@@ -166,25 +166,33 @@ footer.site-footer a { color: var(--ink-muted); }
 }
 
 /* ==========================================================
-   도장(별점) - 시그니처 요소
+   기술 태그 - 시그니처 요소
    ========================================================== */
-.stamp {
-  display: inline-flex;
-  align-items: center;
-  gap: 3px;
-  transform: rotate(-2deg);
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
 }
-.stamp .dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  border: 1.4px solid var(--ochre);
-  background: transparent;
+.tag-pill {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  color: var(--pine-dark);
+  background: var(--ochre-soft);
+  border: 1px solid var(--ochre);
+  padding: 2px 9px;
+  border-radius: 999px;
+  transform: rotate(-0.6deg);
 }
-.stamp .dot.filled { background: var(--ochre); }
 
-.stamp-lg { transform: rotate(-3deg); gap: 5px; }
-.stamp-lg .dot { width: 12px; height: 12px; border-width: 1.6px; }
+.ext-link {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--pine);
+  border-bottom: 1px solid var(--pine);
+}
+.ext-link:hover { color: var(--pine-dark); }
 
 /* ==========================================================
    글 상세
@@ -240,6 +248,30 @@ article.page-content .post-header {
   border-radius: 3px;
   font-size: 0.9em;
 }
+
+/* 코드 블록(Python 등) 문법 강조 - rouge */
+.post-body .highlighter-rouge,
+.post-body pre.highlight {
+  background: var(--ink);
+  color: #eee8d8;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 22px 0;
+}
+.post-body .highlight pre { margin: 0; padding: 18px 20px; }
+.post-body .highlight code {
+  background: none;
+  color: inherit;
+  padding: 0;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+.post-body .highlight .c, .post-body .highlight .c1, .post-body .highlight .cm { color: #8a9a8a; font-style: italic; } /* 주석 */
+.post-body .highlight .s, .post-body .highlight .s1, .post-body .highlight .s2 { color: #d9b96a; } /* 문자열 */
+.post-body .highlight .k, .post-body .highlight .kn, .post-body .highlight .kd { color: #7fb0a0; } /* 키워드 */
+.post-body .highlight .nb, .post-body .highlight .nf { color: #cfa876; } /* 함수/내장 */
+.post-body .highlight .mi, .post-body .highlight .mf { color: #c98a5a; } /* 숫자 */
+.post-body .highlight .o { color: #d8d2bd; } /* 연산자 */
 .post-body hr {
   border: none;
   border-top: 1px dashed var(--paper-edge);
