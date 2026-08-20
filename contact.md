@@ -7,7 +7,7 @@ description: "채용 관련 문의 및 연락처 정보를 안내합니다."
 
 아래 방법으로 연락 주시면 빠르게 확인하겠습니다.
 
-- **이메일**: your-email@example.com
+- **이메일**: tsi03010@naver.com
 - **LinkedIn**: https://www.linkedin.com/in/your-id
 - **GitHub**: https://github.com/your-id
 
