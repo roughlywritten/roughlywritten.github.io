@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<div class="intro">
+  <p>{{ page.intro | default: site.description }}</p>
+</div>
+
+<ul class="entry-list">
+  {% for post in site.posts %}
+  <li class="entry-row">
+    <div class="entry-meta">
+      <span class="entry-date">{{ post.date | date: "%Y.%m.%d" }}</span>
+      {% if post.rating %}
+      <div class="stamp" aria-label="평점 {{ post.rating }}점 / 5점">
+        {% for i in (1..5) %}
+          {% if i <= post.rating %}<span class="dot filled"></span>{% else %}<span class="dot"></span>{% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    <div>
+      {% if post.category %}<span class="entry-cat">{{ post.category }}</span>{% endif %}
+      <a class="entry-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      {% if post.description %}
+      <p class="entry-excerpt">{{ post.description }}</p>
+      {% else %}
+      <p class="entry-excerpt">{{ post.excerpt | strip_html | truncate: 90 }}</p>
+      {% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+
+{% if site.posts.size == 0 %}
+<p class="entry-excerpt">아직 글이 없습니다. <code>_posts</code> 폴더에 첫 글을 추가해보세요.</p>
+{% endif %}

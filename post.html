@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<article class="post-single">
+  <div class="post-header">
+    {% if page.category %}<span class="entry-cat">{{ page.category }}</span>{% endif %}
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y년 %m월 %d일" }}</time>
+      {% if page.rating %}
+      <div class="stamp stamp-lg" aria-label="평점 {{ page.rating }}점 / 5점">
+        {% for i in (1..5) %}
+          {% if i <= page.rating %}<span class="dot filled"></span>{% else %}<span class="dot"></span>{% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="post-body">
+    {{ content }}
+  </div>
+
+  <div class="post-nav">
+    <a href="{{ '/' | relative_url }}">&larr; 전체 글 목록</a>
+  </div>
+</article>
