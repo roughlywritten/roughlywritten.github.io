@@ -1,12 +1,12 @@
 # ============================================
 # 아래 값들을 본인 정보로 바꿔주세요
 # ============================================
-title: "OOO 계리사 데이터 포트폴리오"        # 본인 이름/타이틀로 변경 (예: "김철수 | Actuary & Data")
+title: "박지은 | Actuary & Data"        # 본인 이름/타이틀로 변경 (예: "김철수 | Actuary & Data")
 description: "보험계리 실무에 Python, Excel, Prophet, AI를 적용한 프로젝트 기록"  # 검색결과에 노출됨
-url: "https://YOUR-GITHUB-USERNAME.github.io"   # 예: https://hong123.github.io
+url: "https://roughlywritten.github.io"   # 예: https://hong123.github.io
 baseurl: ""                     # 저장소 이름을 그대로 쓸 경우 "/저장소이름" 으로 변경 (아래 README 참고)
 lang: ko
-author: "OOO"                   # 실명 권장 (검색/채용담당자 노출에 유리)
+author: "박지은"                   # 실명 권장 (검색/채용담당자 노출에 유리)
 timezone: Asia/Seoul
 
 # ============================================
