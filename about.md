@@ -2,11 +2,11 @@
 layout: page
 title: "소개"
 permalink: /about/
-description: "보험계리사로서의 경력과 데이터 역량을 소개합니다."
+description: "데이터 역량 관련 포트폴리오 페이지입니다."
 ---
 
 안녕하세요. 보험계리 업무에 Python, Excel, Prophet, AI 도구를 접목해
-실무 효율을 높이는 데 관심이 많은 계리사 OOO입니다.
+실무 효율을 높이는 데 관심이 많은 박지은입니다.
 
 <!-- 아래 항목을 실제 이력으로 채워보세요 -->
 
